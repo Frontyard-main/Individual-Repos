@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home_page</title>
+</head>
+<body>
+<form action="reset_con" method="POST" class="login_form">
+<a href = 'login'>Back</a>
+    <div>Company_name:</span><input type="text" name="c_name" value="{{cname}}" placeholder="Enter the New password" required /></div><br />
+    <div>New Password:</span><input type="password" name="n_pass" value="" placeholder="Enter the New password" required /></div><br />
+    <div>Confirm Password:</span><input type="password" name="c_pass" value="" placeholder="Re-enter the NewPassword.." required /></div><br />
+    {% if flag %}
+    <p style="color:Tomato;" >New password and confirm password doesn't match</p><br />
+    {% endif %}
+ <div><button type="submit">Reset Password</button></div>
+</form>
+</body>
+</html>

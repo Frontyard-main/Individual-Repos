@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<h1>Login form</h1>
+<form action="home_page" method="POST" class="login_form">
+
+  <div>Company Name:</span><input type="text" name="company_name" value="" placeholder="Enter the Company name.." required /></div><br />
+    <div>Password.:</span><input type="text" name="pass" value="" placeholder="Enter the Password.." required /></div><br />
+    {% if flag %}
+    <p style="color:Tomato;" >Please enter a right password</p><br />
+    {% endif %}
+ <div><button type="submit">Login</button></div>
+</form>
+</body>
+</html>
