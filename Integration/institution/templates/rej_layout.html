@@ -1,0 +1,18 @@
+    {% extends "rejected.html" %}
+    {% block page_content %}
+    {% for items in data %}
+        {% for item in items %}
+            <h1>Hello, {{ item.College_name }}</h1>
+
+
+            <p>The mail you are using is {{item.email}}.</p>
+
+            <p>The phone you are using is {{item.phone}}.</p>
+            <p>The session time is {{item.requested_date}}.</p>
+            <form method ="post" action="restore">
+              <button type="submit" name="restore" value={{ item.College_name }}>Restore</button>
+            </form>
+
+        {% endfor %}
+    {% endfor %}
+    {% endblock %}

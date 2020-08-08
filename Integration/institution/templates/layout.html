@@ -1,0 +1,19 @@
+    {% extends "pending_req.html" %}
+    {% block page_content %}
+    {% for items in data %}
+        {% for item in items %}
+            <h1>Hello, {{ item.College_name }}</h1>
+
+
+            <p>The mail you are using is {{item.email}}.</p>
+
+            <p>The phone you are using is {{item.phone}}.</p>
+            <p>The session time is {{item.requested_date}}.</p>
+            <form method ="post" action="status">
+              <button type="submit" name="accept" value={{ item.College_name }}> Accept </button>
+              <button type="submit" name="reject" value={{ item.College_name }}> Reject </button>
+            </form>
+
+        {% endfor %}
+    {% endfor %}
+    {% endblock %}

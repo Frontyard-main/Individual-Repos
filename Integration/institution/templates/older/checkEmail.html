@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.6/sweetalert2.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.29.2/sweetalert2.all.js"></script>
+</head>
+<body>
+
+  <div class="container">
+      <div class="jumbotron mt-3">
+          <h1>Thank You for Registering with us!</h1>
+          <p class="lead">Please check your mail for confirmation.</p>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+
+                Warning
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Not your e-mail address?</h5>
+                <p class="card-text">If {{mail}} is not your mail address then, please register again.</p>
+                <a href="register.html" class="btn btn-primary">Register</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-info-circle" aria-hidden="true"></i> Note
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Not yet received the e-mail?</h5>
+                <p class="card-text">Please check the spam folder in your 
+                  inbox for our mail in case you have not yet received the link.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <script>
+    sweetAlert({
+      position: 'top-end',
+  type: 'success',
+  title: 'Email Sent',
+  showConfirmButton: false,
+  timer: 1500
+    });
+</script>
+
+</body>
+</html>
