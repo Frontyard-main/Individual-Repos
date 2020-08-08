@@ -68,6 +68,18 @@
 </style>
 </head>
 <body>
+    <div class="alert alert-success ">
+        {% if flag %}
+        <strong >Requested!</strong>
+        <P>"Hey!Thanks for Registering,we are happy to work with you.Please keep checking your mail for login details,we will be sending you.Keep in update"</P>
+        {% endif %}
+        {% if flag1 %}
+        <strong style="color:Tomato;" >Not Requested!</strong>
+        <p>"Hey!Thanks for choosing us.We could see your Insttution  that was provided is already registered. Could please contact 
+        <strong style="color:Tomato;" > {{mail}} </strong>
+        to get the login details for your institution</p>
+        {% endif %}
+    </div>    
 <div class="register-form">
     <form action="verification" method="post">
         <h2 class="text-center">Sign Up</h2>
@@ -129,17 +141,7 @@
             <button type="submit" class="btn btn-primary btn-block" id="btnValidate">Register</button>
         </div>     
     </form>
-    {% if flag %}
-    <p style="color:Tomato;" >Requested</p><br />
-    <P>"Hey!Thanks for Registering,we are happy to work with you.Please keep checking your mail for login details,we will be sending you.Keep in update"</P>
-    {% endif %}
-    {% if flag1 %}
-    <p style="color:Tomato;" >Not Requested yet</p>
-    <p>"Hey!Thanks for choosing us.We could see your Insttution  that was provided is already registered. Could please contact <br>
-     <p style="color:Tomato;" > {{mail}} </p>
-     <p>to get the login details for your institution</p>
-    {% endif %}
-    <p class="text-center small">Institution already registered? <a href="http://127.0.0.1:5000/login">Click here</a>.</p>
+  
 </div>
 <script>
     $(document).ready(function(){

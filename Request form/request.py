@@ -94,7 +94,7 @@ def insertion():
         
         c.execute("select point_of_contact_mail from request5 where college_name = '{}'".format(college_name))
         data = c.fetchone()
-        
+        print(data)
         if data == None :
             flag = True
             flag1 = False
