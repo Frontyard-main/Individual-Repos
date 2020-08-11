@@ -1,0 +1,58 @@
+<main>
+  
+    <style>
+    table, th, td {
+    border: 1px solid black;
+  }
+      table {
+    margin: 30px;
+  }
+  </style>
+  
+   <table>
+    <head>PAST CONTRACTS</head>
+    <tr>
+      <th>contract id</th>
+      <th>institution</th>
+      <th>no. of students</th>
+      <th>start date</th>
+      <th>end date</th>
+    </tr>
+    
+        {%for i in past%}
+        <tr>
+          {%for j in i%}
+          <td>{{j}}</td>
+          {% endfor %}
+        </tr>   
+        {%endfor%}
+        
+    
+  
+   
+  </table>
+    
+  <table>
+       <head>PRESENT CONTRACTS</head>
+    <tr>
+      <th>contract id</th>
+      <th>institution</th>
+      <th>no. of students</th>
+      <th>start date</th>
+      <th>end date</th>
+    </tr>
+   
+      {%for i in present%}
+      <tr> 
+        {%for j in i %}
+        
+        <td>{{j}}</td>
+       
+        {% endfor %} 
+      </tr>  
+      {%endfor%}
+    
+    
+   
+  </table>
+  </main>

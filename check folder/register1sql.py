@@ -97,7 +97,7 @@ while(r=='y'):
     r=input("do you want to insert?(y/n)")
 
 with conn:
-    update_registertable(conn, ('abc', 'abc@gmail.com', 7664, 'abc'))
+    update_registertable(conn, ('abc', 'abc@gmail.com',6908, 'abc'))
     delete_from_registertable(conn, 'val1')
     print_registertable(conn)
 
